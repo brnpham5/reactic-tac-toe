@@ -1,0 +1,54 @@
+.game {
+    display:  flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 2px black;
+}
+
+.game .setting .board-size-input {
+    margin: 0.25rem;
+}
+
+.game .setting .description {
+    margin-right: 0.25rem;
+}
+
+.game .game-area {
+    width: 100%;
+    max-width: 40rem;
+}
+
+.game .game-area .game-board{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.game .game-area .game-board .board-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game .game-area .game-board .board-row .square {
+    position: relative;
+    flex-basis: calc(33.333% - 10px);
+    box-sizing: border-box;
+}
+
+.game .game-area .game-board .board-row .square::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+.game .game-area .game-board .board-row .square .content {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
